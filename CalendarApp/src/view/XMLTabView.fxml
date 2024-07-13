@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="649.0" prefWidth="629.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.XMLTabView">
+   <children>
+      <VBox layoutX="-1.0" prefHeight="649.0" prefWidth="629.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="29.0" prefWidth="630.0" spacing="110.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Events" textAlignment="CENTER" wrappingWidth="100.0" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Contacts" textAlignment="CENTER" wrappingWidth="100.0" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Categories" textAlignment="CENTER" wrappingWidth="100.0" />
+               </children>
+               <VBox.margin>
+                  <Insets top="25.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="400.0" prefWidth="630.0" spacing="10.0">
+               <children>
+                  <ListView fx:id="listViewXML_EventList" prefHeight="200.0" prefWidth="200.0" />
+                  <ListView fx:id="listViewXML_ContactList" prefHeight="200.0" prefWidth="200.0" />
+                  <ListView fx:id="listViewXML_CategoryList" prefHeight="200.0" prefWidth="200.0" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="100.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#buttonXML_DisplayData" prefHeight="50.0" prefWidth="299.0" text="Display XML file data">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets top="60.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

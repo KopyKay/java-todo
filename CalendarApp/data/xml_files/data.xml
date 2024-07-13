@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="17.0.9" class="java.beans.XMLDecoder">
+ <object class="java.util.ArrayList">
+  <void method="add">
+   <object class="model.Category" id="Category0">
+    <void property="colorHex">
+     <string>#BAED11</string>
+    </void>
+    <void property="id">
+     <int>2</int>
+    </void>
+    <void property="name">
+     <string>Home and Family</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="model.Category" id="Category1">
+    <void property="colorHex">
+     <string>#0000FF</string>
+    </void>
+    <void property="id">
+     <int>1</int>
+    </void>
+    <void property="name">
+     <string>Music and Entertainment</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="model.Category" id="Category2">
+    <void property="colorHex">
+     <string>#A344BD</string>
+    </void>
+    <void property="id">
+     <int>3</int>
+    </void>
+    <void property="name">
+     <string>Technology and Innovation</string>
+    </void>
+   </object>
+  </void>
+ </object>
+ <object class="java.util.ArrayList">
+  <void method="add">
+   <object class="model.Event" id="Event0">
+    <void property="category">
+     <object idref="Category1"/>
+    </void>
+    <void property="contacts">
+     <void method="add">
+      <object class="model.Contact" id="Contact0">
+       <void property="events">
+        <void method="add">
+         <object idref="Event0"/>
+        </void>
+       </void>
+       <void property="firstName">
+        <string>Patrick</string>
+       </void>
+       <void property="id">
+        <int>1</int>
+       </void>
+       <void property="lastName">
+        <string>Hellen</string>
+       </void>
+       <void property="phoneNumber">
+        <string>785 822 123</string>
+       </void>
+      </object>
+     </void>
+    </void>
+    <void property="date">
+     <object class="java.time.LocalDateTime" method="parse">
+      <string>2024-01-29T16:00</string>
+     </object>
+    </void>
+    <void property="description">
+     <string></string>
+    </void>
+    <void property="id">
+     <int>4</int>
+    </void>
+    <void property="location">
+     <string></string>
+    </void>
+    <void property="name">
+     <string>Test_Event_1</string>
+    </void>
+    <void property="notifyOffset">
+     <object class="java.time.LocalTime" method="parse">
+      <string>00:28</string>
+     </object>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="model.Event">
+    <void property="category">
+     <object idref="Category0"/>
+    </void>
+    <void property="date">
+     <object class="java.time.LocalDateTime" method="parse">
+      <string>2024-01-29T16:05</string>
+     </object>
+    </void>
+    <void property="description">
+     <string>xyz</string>
+    </void>
+    <void property="id">
+     <int>6</int>
+    </void>
+    <void property="location">
+     <string>xyz</string>
+    </void>
+    <void property="name">
+     <string>Test_Event_3</string>
+    </void>
+    <void property="notifyOffset">
+     <object class="java.time.LocalTime" method="parse">
+      <string>00:35</string>
+     </object>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="model.Event">
+    <void property="category">
+     <object idref="Category2"/>
+    </void>
+    <void property="date">
+     <object class="java.time.LocalDateTime" method="parse">
+      <string>2024-01-29T16:30</string>
+     </object>
+    </void>
+    <void property="description">
+     <string>Test_Description_new</string>
+    </void>
+    <void property="id">
+     <int>5</int>
+    </void>
+    <void property="location">
+     <string>Test_Location_new</string>
+    </void>
+    <void property="name">
+     <string>Test_Event_2_new</string>
+    </void>
+    <void property="notifyOffset">
+     <object class="java.time.LocalTime" method="parse">
+      <string>00:50</string>
+     </object>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="model.Event" id="Event1">
+    <void property="category">
+     <object idref="Category2"/>
+    </void>
+    <void property="contacts">
+     <void method="add">
+      <object class="model.Contact" id="Contact1">
+       <void property="events">
+        <void method="add">
+         <object idref="Event1"/>
+        </void>
+       </void>
+       <void property="firstName">
+        <string>Bob</string>
+       </void>
+       <void property="id">
+        <int>3</int>
+       </void>
+       <void property="lastName">
+        <string>Smith</string>
+       </void>
+       <void property="phoneNumber">
+        <string>678 654 109</string>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="model.Contact" id="Contact2">
+       <void property="events">
+        <void method="add">
+         <object idref="Event1"/>
+        </void>
+       </void>
+       <void property="firstName">
+        <string>Emma</string>
+       </void>
+       <void property="id">
+        <int>4</int>
+       </void>
+       <void property="lastName">
+        <string>Hernandez</string>
+       </void>
+       <void property="phoneNumber">
+        <string>765 871 236</string>
+       </void>
+      </object>
+     </void>
+    </void>
+    <void property="date">
+     <object class="java.time.LocalDateTime" method="parse">
+      <string>2024-09-18T11:30</string>
+     </object>
+    </void>
+    <void property="description">
+     <string>Work meeting with colleagues</string>
+    </void>
+    <void property="id">
+     <int>2</int>
+    </void>
+    <void property="location">
+     <string>Virtual</string>
+    </void>
+    <void property="name">
+     <string>Home Office Meeting</string>
+    </void>
+    <void property="notifyOffset">
+     <object class="java.time.LocalTime" method="parse">
+      <string>02:00</string>
+     </object>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="model.Event" id="Event2">
+    <void property="category">
+     <object idref="Category2"/>
+    </void>
+    <void property="contacts">
+     <void method="add">
+      <object class="model.Contact" id="Contact3">
+       <void property="events">
+        <void method="add">
+         <object idref="Event2"/>
+        </void>
+       </void>
+       <void property="firstName">
+        <string>Sophia</string>
+       </void>
+       <void property="id">
+        <int>6</int>
+       </void>
+       <void property="lastName">
+        <string>Lee</string>
+       </void>
+       <void property="phoneNumber">
+        <string>487 987 126</string>
+       </void>
+      </object>
+     </void>
+    </void>
+    <void property="date">
+     <object class="java.time.LocalDateTime" method="parse">
+      <string>2024-11-08T16:45</string>
+     </object>
+    </void>
+    <void property="description">
+     <string>Hands-on workshop on new technologies</string>
+    </void>
+    <void property="id">
+     <int>3</int>
+    </void>
+    <void property="location">
+     <string>Tech Hub</string>
+    </void>
+    <void property="name">
+     <string>Tech Workshop</string>
+    </void>
+    <void property="notifyOffset">
+     <object class="java.time.LocalTime" method="parse">
+      <string>00:30</string>
+     </object>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="model.Event">
+    <void property="category">
+     <object idref="Category0"/>
+    </void>
+    <void property="date">
+     <object class="java.time.LocalDateTime" method="parse">
+      <string>2024-11-17T19:00</string>
+     </object>
+    </void>
+    <void property="description">
+     <string>Dinner and games with family</string>
+    </void>
+    <void property="id">
+     <int>1</int>
+    </void>
+    <void property="location">
+     <string>Home</string>
+    </void>
+    <void property="name">
+     <string>Family Gathering</string>
+    </void>
+    <void property="notifyOffset">
+     <object class="java.time.LocalTime" method="parse">
+      <string>01:00</string>
+     </object>
+    </void>
+   </object>
+  </void>
+ </object>
+ <object class="java.util.ArrayList">
+  <void method="add">
+   <object class="model.Contact">
+    <void property="firstName">
+     <string>Alice</string>
+    </void>
+    <void property="id">
+     <int>2</int>
+    </void>
+    <void property="lastName">
+     <string>Johnson</string>
+    </void>
+    <void property="phoneNumber">
+     <string>555 123 456</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object idref="Contact1"/>
+  </void>
+  <void method="add">
+   <object idref="Contact2"/>
+  </void>
+  <void method="add">
+   <object idref="Contact0"/>
+  </void>
+  <void method="add">
+   <object idref="Contact3"/>
+  </void>
+ </object>
+</java>

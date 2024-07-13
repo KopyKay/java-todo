@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="349.0" prefWidth="629.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.UpdateContactPopupView">
+   <children>
+      <HBox layoutY="10.0" prefHeight="279.0" prefWidth="629.0">
+         <children>
+            <VBox prefHeight="289.0" prefWidth="312.0">
+               <children>
+                  <Label text="First name">
+                     <VBox.margin>
+                        <Insets top="30.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="textFieldContact_FirstName" />
+                  <Label text="Last name">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="textFieldContact_LastName" />
+                  <Label text="Phone number">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="textFieldContact_PhoneNumber" />
+               </children>
+               <HBox.margin>
+                  <Insets left="20.0" right="10.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox prefHeight="289.0" prefWidth="316.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="27.0" prefWidth="287.0">
+                     <children>
+                        <Label prefHeight="18.0" prefWidth="81.0" text="Events">
+                           <HBox.margin>
+                              <Insets right="50.0" top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Filter date by: ">
+                           <HBox.margin>
+                              <Insets bottom="5.0" />
+                           </HBox.margin>
+                        </Text>
+                        <DatePicker fx:id="datePickerContact_FilterBy" onAction="#datePickerContact_FilterBy_Select">
+                           <HBox.margin>
+                              <Insets bottom="5.0" />
+                           </HBox.margin>
+                        </DatePicker>
+                     </children>
+                  </HBox>
+                  <ListView fx:id="listViewContact_Events" prefHeight="112.0" prefWidth="287.0" />
+                  <HBox alignment="CENTER" prefHeight="31.0" prefWidth="287.0" spacing="50.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#buttonContact_SelectEvents_Click" prefHeight="30.0" prefWidth="90.0" text="Select" />
+                        <Button mnemonicParsing="false" onAction="#buttonContact_ClearSelectedEvents_Click" prefHeight="30.0" prefWidth="90.0" text="Clear selected" />
+                     </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Selected events:">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Text>
+                  <ListView fx:id="listViewContact_EventsSelected" prefHeight="70.0" prefWidth="287.0" />
+               </children>
+               <HBox.margin>
+                  <Insets left="10.0" right="20.0" />
+               </HBox.margin>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutY="289.0" prefHeight="45.0" prefWidth="629.0" spacing="100.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#buttonContact_UpdateSelectedContact_Click" prefHeight="30.0" prefWidth="115.0" text="Update contact" />
+            <Button mnemonicParsing="false" onAction="#buttonContact_Cancel_Click" prefHeight="30.0" prefWidth="115.0" text="Cancel" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="180.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.CategoriesTabView">
+  <children>
+    <VBox layoutX="-1.0" prefHeight="649.0" prefWidth="629.0">
+      <children>
+        <HBox alignment="BOTTOM_LEFT" prefHeight="26.0" prefWidth="629.0">
+          <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Category list" />
+          </children>
+          <VBox.margin>
+            <Insets left="25.0" top="10.0" />
+          </VBox.margin>
+        </HBox>
+        <ListView fx:id="listViewCategory_CategoryList" prefHeight="200.0" prefWidth="200.0">
+          <VBox.margin>
+            <Insets bottom="10.0" left="25.0" right="25.0" top="5.0" />
+          </VBox.margin>
+        </ListView>
+        <HBox alignment="CENTER" prefHeight="32.0" prefWidth="629.0" spacing="100.0">
+          <children>
+            <Button mnemonicParsing="false" onAction="#buttonCategory_Update_Click" prefHeight="30.0" prefWidth="100.0" text="Update" />
+            <Button mnemonicParsing="false" onAction="#buttonCategory_Delete_Click" prefHeight="30.0" prefWidth="100.0" text="Delete" />
+          </children>
+        </HBox>
+        <VBox prefHeight="10.0" prefWidth="629.0">
+          <children>
+            <Separator prefHeight="11.0" prefWidth="629.0">
+              <VBox.margin>
+                <Insets top="15.0" />
+              </VBox.margin>
+            </Separator>
+          </children>
+        </VBox>
+        <VBox prefHeight="279.0" prefWidth="329.0">
+          <children>
+            <Label text="Name" />
+            <TextField fx:id="textFieldCategory_Name" />
+            <Label text="Color">
+              <VBox.margin>
+                <Insets top="10.0" />
+              </VBox.margin>
+            </Label>
+            <ColorPicker fx:id="colorPickerCategory_Color" onAction="#colorPickerCategory_Color_Select" prefHeight="25.0" prefWidth="229.0" />
+          </children>
+          <VBox.margin>
+            <Insets left="200.0" right="200.0" top="15.0" />
+          </VBox.margin>
+          <padding>
+            <Insets top="60.0" />
+          </padding>
+        </VBox>
+        <HBox alignment="CENTER" prefHeight="45.0" prefWidth="629.0" spacing="100.0">
+          <children>
+            <Button mnemonicParsing="false" onAction="#buttonCategory_AddNewCategory_Click" prefHeight="30.0" prefWidth="115.0" text="Add new category" />
+            <Button mnemonicParsing="false" onAction="#buttonCategory_ClearFields_Click" prefHeight="30.0" prefWidth="115.0" text="Clear fields" />
+          </children>
+        </HBox>
+      </children>
+    </VBox>
+  </children>
+</AnchorPane>

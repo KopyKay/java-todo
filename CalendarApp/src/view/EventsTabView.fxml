@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="180.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.EventsTabView">
+  <children>
+    <VBox alignment="CENTER" layoutX="-1.0" prefHeight="649.0" prefWidth="629.0">
+      <children>
+        <HBox alignment="BOTTOM_CENTER" prefHeight="26.0" prefWidth="629.0">
+          <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Event list" />
+            <HBox alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="528.0">
+              <children>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Filter by date: " />
+                <DatePicker fx:id="datePickerEvent_FilterBy" onAction="#datePickerEvent_FilterBy_Select">
+                  <HBox.margin>
+                    <Insets right="20.0" />
+                  </HBox.margin>
+                </DatePicker>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sort by: " />
+                <ComboBox fx:id="comboBoxEvent_SortBy" onAction="#comboBoxEvent_SortBy_Select" prefWidth="150.0" />
+              </children>
+            </HBox>
+          </children>
+        </HBox>
+        <ListView fx:id="listViewEvent_EventList" prefHeight="200.0" prefWidth="200.0">
+          <VBox.margin>
+            <Insets bottom="10.0" left="25.0" right="25.0" top="5.0" />
+          </VBox.margin>
+        </ListView>
+        <HBox alignment="CENTER" prefHeight="32.0" prefWidth="629.0" spacing="30.0">
+          <children>
+            <Button mnemonicParsing="false" onAction="#buttonEvent_Update_Click" prefHeight="30.0" prefWidth="120.0" text="Update" />
+            <Button mnemonicParsing="false" onAction="#buttonEvent_Delete_Click" prefHeight="30.0" prefWidth="120.0" text="Delete" />
+                  <Button mnemonicParsing="false" onAction="#buttonEvent_DeleteOlderEvents_Click" prefHeight="30.0" prefWidth="120.0" text="Delete older events" />
+            <Button mnemonicParsing="false" onAction="#buttonEvent_Reset_Click" prefHeight="30.0" prefWidth="120.0" text="Reset filter/sort" />
+          </children>
+        </HBox>
+        <VBox prefHeight="10.0" prefWidth="629.0">
+          <children>
+            <Separator prefHeight="11.0" prefWidth="629.0">
+              <VBox.margin>
+                <Insets top="15.0" />
+              </VBox.margin>
+            </Separator>
+          </children>
+        </VBox>
+        <HBox prefHeight="279.0" prefWidth="629.0">
+          <VBox.margin>
+            <Insets top="15.0" />
+          </VBox.margin>
+          <children>
+            <VBox prefHeight="289.0" prefWidth="312.0">
+              <children>
+                <Label text="Name" />
+                <TextField fx:id="textFieldEvent_Name" />
+                <HBox prefHeight="45.0" prefWidth="282.0">
+                  <children>
+                    <VBox prefWidth="130.0">
+                      <children>
+                        <Label text="Date" />
+                        <DatePicker fx:id="datePickerEvent_Date" />
+                      </children>
+                      <HBox.margin>
+                        <Insets right="10.0" />
+                      </HBox.margin>
+                    </VBox>
+                    <VBox prefWidth="90.0">
+                      <children>
+                        <Label text="Time" />
+                        <TextField fx:id="textFieldEvent_Time" />
+                      </children>
+                      <HBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                      </HBox.margin>
+                    </VBox>
+                              <VBox prefWidth="90.0">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                                 <children>
+                                    <Label text="Notify offset" />
+                                    <TextField fx:id="textFieldEvent_NotifyOffset" />
+                                 </children>
+                              </VBox>
+                  </children>
+                  <VBox.margin>
+                    <Insets top="10.0" />
+                  </VBox.margin>
+                </HBox>
+                <Label text="Location">
+                  <VBox.margin>
+                    <Insets top="10.0" />
+                  </VBox.margin>
+                </Label>
+                <TextField fx:id="textFieldEvent_Location" />
+                <Label text="Category">
+                  <VBox.margin>
+                    <Insets top="10.0" />
+                  </VBox.margin>
+                </Label>
+                <ComboBox fx:id="comboBoxEvent_Category" prefHeight="25.0" prefWidth="282.0" />
+                <Label text="Description">
+                  <VBox.margin>
+                    <Insets top="10.0" />
+                  </VBox.margin>
+                </Label>
+                <TextArea fx:id="textAreaEvent_Description" prefHeight="51.0" prefWidth="282.0" />
+              </children>
+              <HBox.margin>
+                <Insets left="20.0" right="10.0" />
+              </HBox.margin>
+            </VBox>
+            <VBox prefHeight="289.0" prefWidth="316.0">
+              <children>
+                <HBox alignment="CENTER" prefHeight="27.0" prefWidth="287.0">
+                  <children>
+                    <Label prefHeight="17.0" prefWidth="51.0" text="Contacts">
+                      <HBox.margin>
+                        <Insets right="50.0" top="5.0" />
+                      </HBox.margin>
+                    </Label>
+                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sort by: ">
+                      <HBox.margin>
+                        <Insets bottom="5.0" />
+                      </HBox.margin>
+                    </Text>
+                    <ComboBox fx:id="comboBoxEvent_ContactsSortBy" onAction="#comboBoxEvent_ContactsSortBy_Select" prefWidth="150.0">
+                      <HBox.margin>
+                        <Insets bottom="5.0" />
+                      </HBox.margin>
+                    </ComboBox>
+                  </children>
+                </HBox>
+                <ListView fx:id="listViewEvent_Contacts" prefHeight="112.0" prefWidth="287.0" />
+                <HBox alignment="CENTER" prefHeight="31.0" prefWidth="287.0" spacing="50.0">
+                  <children>
+                    <Button mnemonicParsing="false" onAction="#buttonEvent_SelectContacts_Click" prefHeight="30.0" prefWidth="90.0" text="Select" />
+                    <Button mnemonicParsing="false" onAction="#buttonEvent_ClearSelectedContacts_Click" prefHeight="30.0" prefWidth="90.0" text="Clear selected" />
+                  </children>
+                  <VBox.margin>
+                    <Insets top="10.0" />
+                  </VBox.margin>
+                </HBox>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Selected contacts:">
+                  <VBox.margin>
+                    <Insets top="10.0" />
+                  </VBox.margin>
+                </Text>
+                <ListView fx:id="listViewEvent_ContactsSelected" prefHeight="70.0" prefWidth="287.0" />
+              </children>
+              <HBox.margin>
+                <Insets left="10.0" right="20.0" />
+              </HBox.margin>
+            </VBox>
+          </children>
+        </HBox>
+        <HBox alignment="CENTER" prefHeight="45.0" prefWidth="629.0" spacing="100.0">
+          <children>
+            <Button mnemonicParsing="false" onAction="#buttonEvent_AddNewEvent_Click" prefHeight="30.0" prefWidth="115.0" text="Add new event" />
+            <Button mnemonicParsing="false" onAction="#buttonEvent_ClearFields_Click" prefHeight="30.0" prefWidth="115.0" text="Clear fields" />
+          </children>
+        </HBox>
+      </children>
+    </VBox>
+  </children>
+</AnchorPane>
